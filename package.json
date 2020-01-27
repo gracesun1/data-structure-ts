@@ -1,0 +1,11 @@
+{
+  "name": "data-structure",
+  "version": "1.0.0",
+  "description": "",
+  "main": "./bin/index.js",
+  "scripts": {
+    "ts": "tsc -p ./tsconfig.json && node ./bin/index.js"
+  },
+  "author": "",
+  "license": "ISC"
+}

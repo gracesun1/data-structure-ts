@@ -3,11 +3,12 @@ console.log("main")
 import {NewList} from './collection/lists/interface'
 
 // let l = NewList("array-list")
-let l = NewList("linked-list")
+let l = NewList("double-linked-list")
 
 console.log(l.printList())
 
 l.insert(11, -1000)
+console.log(l.printList()) // 11
 l.insert(22, -2000)
 console.log(l.printList()) // 11 22
 l.insert(55, 2000) // 11 22 55

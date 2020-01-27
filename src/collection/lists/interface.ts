@@ -3,7 +3,7 @@ export interface InterfaceList {
     makeEmpty(): void;
 
     find(value: number): number; // -1: not-found
-    findKth(index: number): number|null;
+    findKth(index: number): number | null;
 
     insert(value: number, start: number): void;
     delete(value: number, start: number, count: number): void;
@@ -11,17 +11,21 @@ export interface InterfaceList {
 
 import { ArrayList } from './array-list'
 import { LinkedList } from './linked-list';
+import { DoubleLinkedList } from './double-linked-list';
 
 // factory method
 export function NewList(type: string): InterfaceList {
     switch (type) {
-    case "array-list":
-        console.log("[NewList] make an instance of ArrayList")
-        return new ArrayList()
-    case "linked-list":
-        console.log("[NewList] make an instance of LinkedList")
-        return new LinkedList()
-    default:
-        throw("not support")
+        case "array-list":
+            console.log("[NewList] make an instance of ArrayList")
+            return new ArrayList()
+        case "linked-list":
+            console.log("[NewList] make an instance of LinkedList")
+            return new LinkedList()
+        case "double-linked-list":
+            console.log("[NewList] make an instance of DoubleLinkedList")
+            return new DoubleLinkedList()
+        default:
+            throw ("not support")
     }
 }
